@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto;
+}
+@media (max-width: 900px) {
+    .container {
+        width: 100%;
+    }
+}
+
+
+input:not([type=submit]), textarea {
+    border: none;
+    border-bottom: 1px solid white;
+    background: none;
+    width: 100%;
+    margin: 15px 0;
+}
+textarea {
+    border-top: 1px solid white;
+}
+.title-section {
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.title-section:after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: calc(50% - 40px);
+    height: 2px;
+    width: 80px;
+    background-color: #00c7fc;
+}
+
+.button {
+    padding: 15px 35px;
+    border: 2px solid white;
+    display: inline-block;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 200ms ease-in-out;
+    text-transform: uppercase;
+}
+
+.button.active {
+    border-width: 0;
+    background-color: #00c7fc;
+}
+
+header {
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+header .logo,
+header .menu {
+    display: inline-block;
+    vertical-align: middle;
+}
+header .logo {
+    width: 130px;
+}
+
+header .menu {
+    width: calc(100% - 135px);
+    text-align: right;
+    text-decoration: none;
+    list-style: none;
+}
+
+header .menu li {
+    display: inline-block;
+    margin: 0 10px;
+}
+header .menu li a {
+    color: black;
+    text-decoration: none;
+}
+header .menu li a:hover {
+    color: #00c7fc;
+    font-weight: bold;
+}
+
+/* HERO SECTION */
+.hero-section {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    background-image: url(./img/hero-background.jpg);
+}
+
+.hero-section p {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.hero-section h1 {
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.hero-section .button:last-child { 
+    margin-left: 10px;
+}
+
+
+.history-section {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+.history-section p {
+    display: inline-block;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.artwork .col {
+    width: 16.66%;
+    display: inline-block;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-image: url(./img/placeholder.jpg);
+    background-position: center;
+}
+
+.artwork .col .info {
+    width: 100%;    
+    position: absolute;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    bottom: -100%;
+    padding: 30px 20px;
+    background: rgba(0, 199, 252, 0.5);
+    color: white;
+    text-align: center;
+    transition: all 200ms ease-in-out;
+}
+.artwork .col .info h4,
+.artwork .col .info p {
+    margin-bottom: 30px;
+}
+.artwork .col .info .icons > i:first-child {
+    margin-right: 25px;
+}
+.artwork .col:hover .info {
+    bottom: 0;
+}
+
+.process-section {
+    padding: 100px 0;
+    background-color: #f4f4f4;
+}
+
+.process-section .card {
+    width: 30%;
+    padding: 40px 30px;
+    text-align: center;
+    display: inline-block;
+    background-color: white;
+    box-shadow: 0 0 17px rgba(0,0,0,0.05);
+}
+
+.process-section .card:not(:last-child) {
+    margin-right: 5%;
+}
+.process-section .card h4 {
+    margin: 30px 0;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.process-section .card h4:before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: calc(50% - 10px);
+    height: 2px;
+    width: 20px;
+    background-color: #00c7fc;
+}
+
+.client-section {
+    padding: 100px 0;
+    text-align: center;
+}
+.client-section p {
+    display: block;
+    margin: 0 auto;
+    max-width: 600px;
+}
+.client-section .author {
+    margin-top: 20px;
+    font-weight: bold;
+    color: goldenrod;
+}
+.client-section ul {
+    margin-top: 80px;
+    list-style: none;
+}
+.client-section ul li {
+    display: inline-block;
+}
+.client-section ul li:not(:last-child) {
+    margin-right: 80px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+}
+
+footer .first-section {
+    padding: 40px 0;
+}
+
+footer .first-section .first-column,
+footer .first-section .second-column {
+    border: 1px solid white;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 7.5px);
+    padding: 60px;
+}
+
+footer .first-section .first-column {
+    margin-right: 15px;
+    text-align: center;
+}
+footer .first-section .second-column h4 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+footer .first-section .second-column [type=submit] {
+    color: #00c7fc;
+    font-weight: bold;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: right;
+}
+
+footer .second-section {
+    background-color: #00c7fc;
+    padding: 25px 0;
+}
+
+footer .second-section .icons {
+    float: right;
+}
